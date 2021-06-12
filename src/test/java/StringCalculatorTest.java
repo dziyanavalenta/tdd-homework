@@ -39,6 +39,7 @@ public class StringCalculatorTest {
         assertEquals(3, result);
     }
 
+    //Homework
     @Test
     void shouldReturnIfNewLine() {
         //given
