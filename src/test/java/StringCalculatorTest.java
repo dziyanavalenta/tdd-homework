@@ -16,7 +16,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void shouldReturnIfStringFour(){
+    void shouldReturnIfStringFour() {
         //given
         var calculator = new StringCalculator();
 
@@ -24,6 +24,30 @@ public class StringCalculatorTest {
         var result = calculator.add("4");
 
         //then
-        assertEquals(4,result);
+        assertEquals(4, result);
+    }
+
+    @Test
+    void shouldReturnIfStringSum() {
+        //given
+        var calculator = new StringCalculator();
+
+        //when
+        var result = calculator.add("1,2");
+
+        //then
+        assertEquals(3, result);
+    }
+
+    @Test
+    void shouldReturnIfNewLine() {
+        //given
+        var calculator = new StringCalculator();
+
+        //when
+        var result = calculator.add("1\n2,3");
+
+        //then
+        assertEquals(6, result);
     }
 }
